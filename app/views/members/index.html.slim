@@ -1,0 +1,20 @@
+#block
+  h1 Search for Appsterdam members
+  | Searching for appsterdam members?
+== @members.inspect
+ul.members
+  - 10.times do
+    li
+      .badge
+        .ribbon
+        img src="asd"
+        .title 
+          .name="whaha"
+          .role Individual close to your mom
+      p
+        =" lOL"
+        p
+          a="lol"
+        ul.skills
+          - %w(MARKETING DEVELOPMENT RUBY CASH-SUPPLIER DEVELOPMENT MARKETING OWNER FOUNDER).each do |x|
+            li(class=x.downcase)=x

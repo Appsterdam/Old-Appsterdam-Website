@@ -1,0 +1,28 @@
+doctype 5
+html
+  head
+    == stylesheet_link_tag "appsterdam"
+    | <script type="text/javascript" src="http://use.typekit.com/sjb8nvs.js"></script>
+    | <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  body
+    #page
+      #sidebar
+        #logo
+          img src='images/logo.png'
+        ul.navigation
+          - %w(HOME ABOUT EVENTS MEMBERS CLASSIFIEDS JOIN DONATE PRESS).each do |link|
+            li
+              a(href='#{link.downcase}.html')
+                =link
+        #logo
+          img src='images/quote.png'
+        #twitter
+          | im a twitter
+        img src='images/tweet.png'
+      #content
+        //ul.social
+          - %w(twitter facebook linkedin youtube).each do |link|
+            li
+              a href="#{link}"
+                img src="/images/#{link}.png"
+        == yield

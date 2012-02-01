@@ -1,0 +1,12 @@
+div(class=member_classes(member, local_assigns[:member_counter]||0))
+  .inner
+    h2 
+      = image_tag(member.picture, :alt => member.name) unless member.picture.blank? 
+      = link_to(member.name, "http://twitter.com/#{member.username}")
+      = link_to member_domain(member.website), member.website 
+    == member_meta(member)
+    = simple_format auto_link(member.bio) 
+    == member_tags(member.work_types, member.platforms) 
+    - unless @member
+      ul
+        li.report = link_to "Report as spam", member_spam_reports_path(member), :method => :post, :remote => true 

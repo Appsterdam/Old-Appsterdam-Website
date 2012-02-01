@@ -1,12 +1,13 @@
 class MembersController < ApplicationController
-  allow_access(:authenticated, :only => [:edit, :update, :destroy]) { @authenticated.id == Integer(params[:id]) }
-  allow_access :all, :only => [:index, :new, :create]
-  allow_access :admin
+#  allow_access(:authenticated, :only => [:edit, :update, :destroy]) { @authenticated.id == Integer(params[:id]) }
+#  allow_access :all, :only => [:index, :new, :create]
+#  allow_access :admin
 
   include Twitter
 
   def index
     @selection = Selection::Member.new(params)
+    puts @selection
     if @selection.empty? and params[:q].blank?
       unless params[:page]
         params[:started_at_page] = params[:page] = Member.random_start_page

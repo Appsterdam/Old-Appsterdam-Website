@@ -22,7 +22,7 @@ Export some environment variables:
 
 After that install Sphinx
 
-    $ brew instal sphinx
+    $ brew install sphinx
     $ rake ts:index
     $ rake ts:start
 

@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  before_filter :find_authenticated, :block_access
+  #before_filter :find_authenticated, :block_access
 
   protected
 

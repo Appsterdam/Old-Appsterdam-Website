@@ -1,0 +1,254 @@
+@link-color: #C41414;
+
+// STRUCTURE
+
+body {
+  background:#eeeeee;
+  margin:0px;
+  padding:0px;
+  font-family: gesta,sans-serif;
+  padding:10px;
+  margin-bottom:20px;
+  padding-bottom:20px;
+}
+
+a {
+  color: @link-color
+}
+
+#page {
+  width:900px;
+  margin:0px auto;
+}
+
+#sidebar {
+  background-color:white;
+  
+  margin-top:32;
+  width:200px;
+  float:left;
+  border:1px solid #efefef;
+  border-radius:4px;
+  padding:20px;
+  margin-right:9px;
+  
+  #logo {
+    text-align:center;
+  }
+  
+  ul.navigation {
+    margin:10px 20px;
+    text-align:right;
+    list-style:none;
+    
+    a {
+      color:black;
+      text-decoration:none;    
+      padding:5px;
+        
+      &:hover {
+          background-color:@link-color;
+          color:white;
+      }
+    }
+    
+    li {
+      font-size:13px;
+      margin:10px 0px;
+    }
+  }
+  
+  #twitter {
+    margin-top:10px;
+    background:black;
+    border-radius:5px;
+    height:100px;
+  }
+}
+
+#content {
+  float:left;
+  width:600px;
+  font-size:12px;
+
+  
+  ul.social {
+    border-bottom:1px solid #efefef;
+    margin:0px;
+    padding:3px;
+
+    li {
+      margin: 0px 5px;
+      text-align:center;
+      display:inline-block;
+    }
+  }
+}
+
+// STYLING
+
+#block {
+  
+  border-radius:4px;  
+  background-color:white;
+  padding:10px;
+  line-height:20px;
+  margin-bottom:10px;
+  
+  blockquote 
+  {
+    background-color:#efefef;
+    display:block;
+    margin:0px;
+    padding:3px;    
+    p {
+      margin:0px;
+    }
+  }
+  code {
+    background-color:#efefef;
+    display:block;
+    padding:5px;
+  }
+}
+
+table 
+{
+  border:1px solid gray;
+  th {
+    background-color:#efefef;
+  }
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight:bold;
+  padding-left:10px; 
+  border-left:4px solid @link-color;  
+  margin-left:10px;
+}
+
+h1 {
+  margin:0px; 
+  margin-left:5px;
+  margin-bottom:20px;
+  font-weight:normal; 
+  margin-top:20px;
+}
+
+// EVENT
+
+.event {
+  .header {
+    border-bottom: 1px solid black;
+  
+    b {
+      font-size:10px;
+      margin-right:1px;
+      display:inline-block;
+      padding:2px 5px; 
+      color:white;    
+    }
+    
+    b.date {
+      width:40px;
+      text-align:center;
+      background-color:black;
+      color:white;
+    }
+  
+    b.feature {
+      display:inline-block;    
+      background-color:@link-color;
+    }
+  
+    .right { float:right; } 
+  }
+  
+  .meta {
+    background-color:#fafafa;
+    padding:3px;
+  }
+  
+  b:last-child {
+    margin-right:0px;
+  }
+  
+  ul {
+    li {
+      color:@link-color;
+    }
+  }
+}
+
+// MEMBERS
+
+ul.members {
+  margin:0px;
+  padding:0px;
+  
+  > li {
+    border-radius:4px;  
+    background-color:white;
+    padding:10px;
+    line-height:20px;
+    margin-bottom:10px;
+    display:inline-block;
+    vertical-align:top;
+    width:275px;
+      
+    &:nth-child(odd) {
+      margin-right:10px;
+    }
+    
+    p {
+      margin-top:10px;
+      margin-bottom:0px;
+    }
+    
+    ul.skills {
+      margin:0px;
+      padding:0px;
+      line-height:8px;
+            
+      font-size:8px;
+      > li {
+        display:inline-block;
+        color:white;
+        background-color:#a0a0a0;
+        margin-right:2px;
+        padding:2px 3px;
+        margin-bottom:2px;
+        
+        //&.marketing { background-color:darkorange;}
+        //&.development { background-color:green;}   
+        //&.ruby {background-color:darkred;}              
+      }
+    
+    }
+    
+    .badge {
+      padding:5px;
+      img {width:40px;height:40px;display:block;float:left;}
+      background-color:#efefef;   
+        
+      .ribbon {
+        background-image:url('/images/important.png');
+        width:16px;
+        height:24px;
+        float:right;
+        margin-top:-5px;
+        margin-right:2px;
+      }
+            
+      .title {
+        .name { font-size:15px;}
+        .role { font-weight:bold;}
+        
+        vertical-align:top;
+        display:inline-block;
+        padding-left:5px;
+        //background-color:red;
+      }
+    }
+  }
+}
