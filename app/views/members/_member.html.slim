@@ -1,1 +1,14 @@
-h1 lol
+li
+  .badge
+    .ribbon
+    = image_tag(member.picture, :alt => member.name) unless member.picture.blank? 
+    .title 
+      .name=member.name
+      .role==member_meta(member)
+  p
+    = member.bio 
+    p
+      = link_to member_domain(member.website), member.website 
+    ul.skills
+      - %w(MARKETING DEVELOPMENT RUBY CASH-SUPPLIER DEVELOPMENT MARKETING OWNER FOUNDER).each do |x|
+        li(class=x.downcase)=x
