@@ -1,8 +1,8 @@
 class ClassifiedsController < ApplicationController
-  allow_access(:authenticated, :only => [:index, :new, :create])
-  allow_access(:authenticated, :only => [:edit, :update, :destroy]) { !find_classified.nil? }
-  allow_access(:all, :only => :index) { !my_classifieds? } # visitors have no `my classifieds'
-  allow_access(:all, :only => :show)
+  #allow_access(:authenticated, :only => [:index, :new, :create])
+  #allow_access(:authenticated, :only => [:edit, :update, :destroy]) { !find_classified.nil? }
+  #allow_access(:all, :only => :index) { !my_classifieds? } # visitors have no `my classifieds'
+  #allow_access(:all, :only => :show)
 
   def index
     if my_classifieds?

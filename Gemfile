@@ -12,6 +12,7 @@ gem 'flying-sphinx',   '~> 0.6.0', :require => 'flying_sphinx'
 gem 'will_paginate', '~> 3.0.2'
 #gem 'use_tinymce'
 
+gem 'redcarpet'
 gem 'slim'
 gem 'ri_cal' # for parsing iCal
 

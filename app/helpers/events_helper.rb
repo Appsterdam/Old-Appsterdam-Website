@@ -24,8 +24,8 @@ module EventsHelper
     string.gsub(/\b((https?:\/\/|ftps?:\/\/|mailto:|www\.)([A-Za-z0-9\-_=%&@\?\.\/]+))\b/) do
       match = $1
       case match
-      when /^www/     then  "<a href=\"http://#{match}\">#{match}</a>"
-      else                  "<a href=\"#{match}\">#{match}</a>"
+        when /^www/ then "<a href=\"http://#{match}\">#{match}</a>"
+        else "<a href=\"#{match}\">#{match}</a>"
       end
     end
   end

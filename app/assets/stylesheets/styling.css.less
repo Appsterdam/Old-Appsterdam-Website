@@ -137,49 +137,6 @@ h1 {
 
 // EVENT
 
-.event {
-  .header {
-    border-bottom: 1px solid black;
-  
-    b {
-      font-size:10px;
-      margin-right:1px;
-      display:inline-block;
-      padding:2px 5px; 
-      color:white;    
-    }
-    
-    b.date {
-      width:40px;
-      text-align:center;
-      background-color:black;
-      color:white;
-    }
-  
-    b.feature {
-      display:inline-block;    
-      background-color:@link-color;
-    }
-  
-    .right { float:right; } 
-  }
-  
-  .meta {
-    background-color:#fafafa;
-    padding:3px;
-  }
-  
-  b:last-child {
-    margin-right:0px;
-  }
-  
-  ul {
-    li {
-      color:@link-color;
-    }
-  }
-}
-
 // MEMBERS
 
 ul.members {
@@ -208,16 +165,17 @@ ul.members {
     ul.skills {
       margin:0px;
       padding:0px;
-      line-height:8px;
-            
+      line-height:8px;            
       font-size:8px;
+      
       > li {
         display:inline-block;
         color:white;
-        background-color:#a0a0a0;
+        background-color:#808080;
         margin-right:2px;
         padding:2px 3px;
         margin-bottom:2px;
+        font-weight:bold;
         
         //&.marketing { background-color:darkorange;}
         //&.development { background-color:green;}   
@@ -253,4 +211,11 @@ ul.members {
       }
     }
   }
+}
+
+body {
+  background-color:#cc;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
 }

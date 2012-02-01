@@ -1,6 +1,5 @@
 class SessionsController < ApplicationController
   allow_access :all
-
   include Twitter
   
   def new

@@ -8,7 +8,6 @@ class Article < ActiveRecord::Base
 
   define_index do
     has :id
-
     indexes :title
   end
 

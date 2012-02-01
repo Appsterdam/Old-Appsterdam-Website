@@ -54,7 +54,6 @@ class Event < ActiveRecord::Base
       next unless adapter.respond_to?(attr)
       event.send("#{attr}=".to_sym, adapter.send(attr))
     end
-    
     event
   end
   

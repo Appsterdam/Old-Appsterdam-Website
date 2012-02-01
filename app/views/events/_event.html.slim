@@ -1,0 +1,15 @@
+#block
+  .event
+    .header
+      b.date=event.starts_at.strftime("%b").upcase
+      b.date=event.starts_at.day
+      b.date=event.starts_at.year
+      b.feature FEATURE EVENT
+      .right    
+        b.date MAP
+        b.date RSVP  
+    h2=event.name
+    div== event.description
+    .location=event.location
+
+    

@@ -103,6 +103,7 @@ GEM
       hashie (~> 1.2.0)
     rdoc (3.12)
       json (~> 1.4)
+    redcarpet (2.0.1)
     ri_cal (0.8.8)
     riddle (1.5.1)
     sass (3.1.12)
@@ -151,6 +152,7 @@ DEPENDENCIES
   peiji-san (~> 1.0.0)
   pg
   rails
+  redcarpet
   ri_cal
   sass
   slim

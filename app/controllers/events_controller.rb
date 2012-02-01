@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  allow_access :all
+  #allow_access :all
 
   def index
 

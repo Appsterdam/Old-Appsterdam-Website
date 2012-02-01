@@ -1,6 +1,7 @@
 doctype 5
 html
   head
+    title Appsterdam
     == stylesheet_link_tag "appsterdam"
     | <script type="text/javascript" src="http://use.typekit.com/sjb8nvs.js"></script>
     | <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
@@ -10,10 +11,16 @@ html
         #logo
           img src='images/logo.png'
         ul.navigation
-          - %w(HOME ABOUT EVENTS MEMBERS CLASSIFIEDS JOIN DONATE PRESS).each do |link|
-            li
-              a(href='#{link.downcase}.html')
-                =link
+          //li=link_to 'HOME', members_url, :title => 'Members in Appsterdam' 
+          //li=link_to 'ABOUT', members_url, :title => 'Members in Appsterdam' 
+          //li=link_to 'JOIN', members_url, :title => 'Members in Appsterdam' 
+          //li=link_to 'DONATE', members_url, :title => 'Members in Appsterdam' 
+          //li=link_to 'PRESS', members_url, :title => 'Members in Appsterdam'
+          
+          li=link_to 'EVENTS', events_url, :title => 'Members in Appsterdam' 
+          li=link_to 'CLASSIFIEDS', classifieds_url, :title => 'Members in Appsterdam' 
+          li=link_to 'MEMBERS', members_url, :title => 'Members in Appsterdam'           
+
         #logo
           img src='images/quote.png'
         #twitter

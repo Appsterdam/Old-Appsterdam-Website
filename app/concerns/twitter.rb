@@ -1,4 +1,5 @@
 module Twitter
+  
   def start_token_request(options)
     @request_token = twitter_client.authentication_request_token(options)
     session[:token] = @request_token.token
