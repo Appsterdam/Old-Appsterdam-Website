@@ -1,5 +1,9 @@
 #block
-  h1 Search for Appsterdam members
-  | Searching for appsterdam members?
+  markdown:
+    # Searching for appsterdam members?
+    
+    Use the facets below to find what you need
+
+  == render "select"
 ul.members
   == render @members

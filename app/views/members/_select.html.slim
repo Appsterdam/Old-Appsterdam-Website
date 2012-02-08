@@ -1,0 +1,42 @@
+.facets
+  .selection 
+    | Showing 
+    span==facet_links( @selection, :entity, ActiveSupport::OrderedHash[[ \
+      ['all',        'all members'], \
+      ['company',    'companies'], \ 
+      ['student',    'students'], \
+      ['individual', 'individuals', ], \ 
+      ['group',      'groups']  \
+      ]]) 
+  
+  .selection 
+    | Who 
+    span==facet_links(@selection, :work_location, ActiveSupport::OrderedHash[[ \
+      ['all',           'are anywhere'], \
+      ['appsterdam',    'are Appsterdammers'], \
+      ['applander',     'are Applanders'], \
+      ['appbroader',    'are Appbroaders', ] \
+      ]])
+
+  .selection 
+    | What 
+    span==facet_links(@selection, :work_type, ActiveSupport::OrderedHash[[ \
+      ['all',                      'any work'], \
+      ['design',                   'design'], \
+      ['development',              'development'], \
+      ['management-executive',     'Management / Executive'], \
+      ['support-customer_service', 'Support / Customer service'] \
+      ]])
+
+  .selection 
+    | Of 
+    span==facet_links(@selection, :platform, ActiveSupport::OrderedHash[[ \
+      ['all',             'any platform'], \
+      ['web',             'The Web'], \
+      ['ios',             'iOS'], \
+      ['android',         'Android'], \
+      ['windows-phone-7', 'Windows Phone 7'], \
+      ['webos',           'WebOS'], \ 
+      ['osx',             'Mac OS X'], \
+      ['windows',         'Windows'] \
+      ]])

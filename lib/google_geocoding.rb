@@ -1,4 +1,5 @@
 module GoogleGeocoding
+  
   class OverApiLimit < StandardError; end
   
   # Not quite happy with this. Some searches simply won't return any results

@@ -5,8 +5,8 @@ li
     .title 
       .name=member.name
       .role==member_meta(member)
-  p= member.bio 
-  p= link_to member_domain(member.website), member.website 
+  p=member.bio 
+  p.link=link_to member_domain(member.website), member.website 
   ul.skills
-    - %w(MARKETING DEVELOPMENT RUBY CASH-SUPPLIER DEVELOPMENT MARKETING OWNER FOUNDER).each do |x|
-      li(class=x.downcase)= x
+    - %w(marketing developer ruby node).each do |x|
+      li(class=x.downcase)= x.upcase
